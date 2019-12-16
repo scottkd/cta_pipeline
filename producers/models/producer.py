@@ -68,12 +68,9 @@ class Producer:
 
     def close(self):
         """Prepares the producer for exit by cleaning up the producer"""
-        #
-        #
-        # TODO: Write cleanup code for the Producer here
-        #
-        #
-        logger.info("producer close incomplete - skipping")
+        logger.info("closing producer")
+        client = AdminClient(self.broker_properties)
+        client.delete_topics(self.existing_topics)
 
     def time_millis(self):
         """Use this function to get the key for Kafka Events"""
