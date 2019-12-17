@@ -1,3 +1,9 @@
 {
-  "TODO": "Complete this Schema! (Make sure to delete this Key/Value Pair!"
+  "station_id": "integer",
+  "train_id": "string",
+  "direction": "string",
+  "line": "string",
+  "train_status": "string",
+  "prev_station_id": "integer",
+  "prev_direction": "string"
 }
